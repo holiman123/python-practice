@@ -8,3 +8,8 @@
 Невелика зміна файлу README, та завантаєення змін на gitHub:
 
 ![sceenshot 2](https://user-images.githubusercontent.com/43368212/123792016-d1467500-d8e8-11eb-839c-01bed8d3ea21.png)
+
+
+Встановлення пакету numpy:
+
+![Безымянный](https://user-images.githubusercontent.com/43368212/123810606-36a36180-d8fb-11eb-9687-773febfa4cf3.png)
