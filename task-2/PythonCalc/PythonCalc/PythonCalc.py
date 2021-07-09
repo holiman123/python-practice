@@ -1,4 +1,7 @@
 
+import math
+
+
 def myReplace(array, replaced, replacing):
     print("my raplace:", ''.join(array) ,''.join(replaced), ''.join(replacing))
     flag = False
@@ -42,9 +45,35 @@ def myRIndex(array, subString):
 
 def replaceWithCalc(exp, action):
     print("replace with calc:", ''.join(exp), action)
-    for i in range(exp.count(action)):
-        exp = myReplace(exp ,exp[exp.index(action) - 1 : exp.index(action) + 2], [str(eval(str(exp[exp.index(action) - 1]) + action + str(exp[exp.index(action) + 1])))])
-    print("return:", ''.join(exp))
+    if action != "sin" and action != "cos" and action != "tg" and action != "ctg" and action != "asin" and action != "acos" and action != "atg" and action != "actg" and action != "sqrt":
+        for i in range(exp.count(action)):
+            exp = myReplace(exp ,exp[exp.index(action) - 1 : exp.index(action) + 2], [str(eval(str(exp[exp.index(action) - 1]) + action + str(exp[exp.index(action) + 1])))])
+    else:
+        for i in range(exp.count(action)):
+            if action == "sqrt":
+                try:
+                    exp = myReplace(exp ,exp[exp.index(action): exp.index(action) + 2], [str(math.sqrt(float(exp[exp.index(action) + 1])))])
+                except ValueError as ex:
+                    exp = ['Error: less then zero root']
+
+            if action == "sin":
+                exp = myReplace(exp ,exp[exp.index(action): exp.index(action) + 2], [str(math.sin(float(exp[exp.index(action) + 1])))])
+            if action == "cos":
+                exp = myReplace(exp ,exp[exp.index(action): exp.index(action) + 2], [str(math.cos(float(exp[exp.index(action) + 1])))])
+            if action == "tg":
+                exp = myReplace(exp ,exp[exp.index(action): exp.index(action) + 2], [str(math.tan(float(exp[exp.index(action) + 1])))])
+            if action == "ctg":
+                exp = myReplace(exp ,exp[exp.index(action): exp.index(action) + 2], [str(1/math.tan(float(exp[exp.index(action) + 1])))])
+            if action == "asin":
+                exp = myReplace(exp ,exp[exp.index(action): exp.index(action) + 2], [str(math.asin(float(exp[exp.index(action) + 1])))])
+            if action == "acos":
+                exp = myReplace(exp ,exp[exp.index(action): exp.index(action) + 2], [str(math.acos(float(exp[exp.index(action) + 1])))])
+            if action == "atg":
+                exp = myReplace(exp ,exp[exp.index(action): exp.index(action) + 2], [str(math.atan(float(exp[exp.index(action) + 1])))])
+            if action == "actg":
+                exp = myReplace(exp ,exp[exp.index(action): exp.index(action) + 2], [str(1/math.atan(float(exp[exp.index(action) + 1])))])
+    
+    print("return:", ''.join(exp))        
     return exp
 
 def calc(exp):
@@ -63,6 +92,15 @@ def calc(exp):
                     break
                 i += 1
         else:
+            exp = replaceWithCalc(exp, "sqrt")
+            exp = replaceWithCalc(exp, "asin")
+            exp = replaceWithCalc(exp, "acos")
+            exp = replaceWithCalc(exp, "atg")
+            exp = replaceWithCalc(exp, "actg")
+            exp = replaceWithCalc(exp, "sin")
+            exp = replaceWithCalc(exp, "cos")
+            exp = replaceWithCalc(exp, "tg")
+            exp = replaceWithCalc(exp, "ctg")
             exp = replaceWithCalc(exp, "**")
             exp = replaceWithCalc(exp, "/")
             exp = replaceWithCalc(exp, "*")
@@ -72,7 +110,8 @@ def calc(exp):
             print("return:", exp)
             return exp
 
-expression = ['1', '+', '(', '5', '*', '(', '3', '**', '2', ')', ')', '-', '4', '+', '(', '1', '+', '1', ')']
+expression = ['sin', '(', 'sqrt', '(', '1',')', ')']
+#print(replaceWithCalc(expression, "cos"))
 
 #print(myReplace(expression, ['(', '5', '*', '(', '3', '**', '2', ')', ')'], ['45']))
 
