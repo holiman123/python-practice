@@ -2,13 +2,14 @@ from tkinter import *
 
 import math
 
-
+# replacing elements in list/array
 def myReplace(array, replaced, replacing):
     print("my raplace:", ''.join(array) ,''.join(replaced), ''.join(replacing))
     flag = False
     index = -1
     finalArray = list(array)
 
+    # Find replacing structer in array
     for i in range(len(array) - len(replaced) + 1):
         flag = True
         for j in range(len(replaced)):
@@ -17,15 +18,18 @@ def myReplace(array, replaced, replacing):
         if flag:
             index = i
 
+    # Remove replacing structer from array
     for i in range(len(replaced)):
         del finalArray[index]
 
+    # Place new structer
     for i in range(len(replacing)):
         finalArray.insert(index + i, replacing[i])
 
     print("final:", ''.join(finalArray))
     return finalArray
 
+# find index of first element in list/array (like standard index function)
 def myLIndex(array, subString):
     print("find left index in:", ''.join(array), ''.join(subString))
     for myi in range(len(array)):
@@ -34,6 +38,7 @@ def myLIndex(array, subString):
             return myi
     return -1
 
+# find index of last element in list/array
 def myRIndex(array, subString):
     print("find right index in:", ''.join(array), ''.join(subString))
     outIndex = -1
@@ -43,13 +48,18 @@ def myRIndex(array, subString):
     print("return:", outIndex)
     return outIndex
 
+# replace math structure ( x 'action' y) to it math equivalent
 def replaceWithCalc(exp, action):
     print("replace with calc:", ''.join(exp), action)
+
+    # Standard math (not functions) operators calculate
     if action != "sin" and action != "cos" and action != "tg" and action != "ctg" and action != "asin" and action != "acos" and action != "atg" and action != "actg" and action != "sqrt" and action != "bin" and action != "log" and action != "ln" and action != "%":
         print("!!!:", exp.count(action))
         print(exp)
         for i in range(exp.count(action)):
             exp = myReplace(exp ,exp[exp.index(action) - 1 : exp.index(action) + 2], [str(eval(str(exp[exp.index(action) - 1]) + action + str(exp[exp.index(action) + 1])))])
+    
+    # Math functions calculate
     else:
         for i in range(exp.count(action)):
             if action == "sqrt":
@@ -85,10 +95,13 @@ def replaceWithCalc(exp, action):
     print("return:", ''.join(exp))        
     return exp
 
+# calculate math expression to number
 def calc(exp):
 
     print("calc", ''.join(exp))
     while(True):
+
+        # Breckets calculate
         if myLIndex(exp, "(") != -1:
             i = myLIndex(exp, "(") + 1
             bracketCount = 1
@@ -101,6 +114,7 @@ def calc(exp):
                     exp = myReplace(exp, exp[myLIndex(exp, "("):i + 1], calc(exp[myLIndex(exp, "(") + 1: i + 0]))
                     break
                 i += 1
+        # calculate each math function by one
         else:
             exp = replaceWithCalc(exp, "log")
             exp = replaceWithCalc(exp, "ln")
@@ -124,6 +138,7 @@ def calc(exp):
             print("return:", exp)
             return exp
 
+# translate standard expression entry to correct form for calc func
 def translate(exp):
     exp = str(exp).replace("√", "sqrt")
     exp = str(exp).split(' ')
@@ -140,10 +155,12 @@ def translate(exp):
                 exp.insert(i + 3, ')')
     return exp
 
+# Equel button pressed event
 def EqPressed(*event):
     if not event or event and event[0].char == '\r':
         outLb.configure(text=''.join(calc(translate(entry.get()))))
 
+# Method for button events
 def Button1Pressed(input = ""):
     if input == "Game":
         outLb.configure(text = str(float(entry.get()) / 160) + " | " + str(float(entry.get()) % 160))
@@ -168,12 +185,13 @@ def Button1Pressed(input = ""):
         else:
             entry.insert(len(str(entry.get())), ' ' + str(input))
 
+# Window settings
 window = Tk()
 window.title("My calculator")
 window.geometry('330x455')
 window.bind("<Key>", EqPressed)
 
-
+# UI settings
 entry = Entry(window, width = 21, font=("Arial Bold", 20))
 entry.grid(column = 0, row = 0, columnspan = 9)
 
