@@ -45,7 +45,7 @@ def myRIndex(array, subString):
 
 def replaceWithCalc(exp, action):
     print("replace with calc:", ''.join(exp), action)
-    if action != "sin" and action != "cos" and action != "tg" and action != "ctg" and action != "asin" and action != "acos" and action != "atg" and action != "actg" and action != "sqrt":
+    if action != "sin" and action != "cos" and action != "tg" and action != "ctg" and action != "asin" and action != "acos" and action != "atg" and action != "actg" and action != "sqrt" and action != "bin" and action != "log" and action != "ln" and action != "%":
         for i in range(exp.count(action)):
             exp = myReplace(exp ,exp[exp.index(action) - 1 : exp.index(action) + 2], [str(eval(str(exp[exp.index(action) - 1]) + action + str(exp[exp.index(action) + 1])))])
     else:
@@ -55,7 +55,14 @@ def replaceWithCalc(exp, action):
                     exp = myReplace(exp ,exp[exp.index(action): exp.index(action) + 2], [str(math.sqrt(float(exp[exp.index(action) + 1])))])
                 except ValueError as ex:
                     exp = ['Error: less then zero root']
-
+            if action == "%":
+                exp = myReplace(exp ,exp[exp.index(action) - 1: exp.index(action) + 2], [str(int(float(exp[exp.index(action) - 1]) / float(exp[exp.index(action) + 1]) * 100)) + "%"])
+            if action == "log":
+                exp = myReplace(exp ,exp[exp.index(action): exp.index(action) + 2], [str(math.log(float(exp[exp.index(action) + 1]), 10))])
+            if action == "ln":
+                exp = myReplace(exp ,exp[exp.index(action): exp.index(action) + 2], [str(math.log(float(exp[exp.index(action) + 1])))])
+            if action == "bin":
+                exp = myReplace(exp ,exp[exp.index(action): exp.index(action) + 2], [str(bin(int(exp[exp.index(action) + 1]))).replace('0b', '')])
             if action == "sin":
                 exp = myReplace(exp ,exp[exp.index(action): exp.index(action) + 2], [str(math.sin(float(exp[exp.index(action) + 1])))])
             if action == "cos":
@@ -92,6 +99,9 @@ def calc(exp):
                     break
                 i += 1
         else:
+            exp = replaceWithCalc(exp, "log")
+            exp = replaceWithCalc(exp, "ln")
+            exp = replaceWithCalc(exp, "bin")
             exp = replaceWithCalc(exp, "sqrt")
             exp = replaceWithCalc(exp, "asin")
             exp = replaceWithCalc(exp, "acos")
@@ -101,6 +111,7 @@ def calc(exp):
             exp = replaceWithCalc(exp, "cos")
             exp = replaceWithCalc(exp, "tg")
             exp = replaceWithCalc(exp, "ctg")
+            exp = replaceWithCalc(exp, "%")
             exp = replaceWithCalc(exp, "**")
             exp = replaceWithCalc(exp, "/")
             exp = replaceWithCalc(exp, "*")
@@ -110,7 +121,7 @@ def calc(exp):
             print("return:", exp)
             return exp
 
-expression = ['sin', '(', 'sqrt', '(', '1',')', ')']
+expression = ['5', '%', '20']
 #print(replaceWithCalc(expression, "cos"))
 
 #print(myReplace(expression, ['(', '5', '*', '(', '3', '**', '2', ')', ')'], ['45']))
