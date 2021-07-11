@@ -57,5 +57,6 @@ Source code has some main methods, and some additional methods.
 
 **Special thanks to:**<br>
 My sister for *"Button for game"* idea,<br>
-[and this video](https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley)!
+and [this video](https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley) author!
   
+ 
