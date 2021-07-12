@@ -1,6 +1,3 @@
-import http.client
-import json
-
 # -*- coding: utf-8 -*-
 
 # Form implementation generated from reading ui file 'task-3.ui'
@@ -13,101 +10,47 @@ import json
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 
-def getCountriesList():
-    connect = http.client.HTTPSConnection("vaccovid-coronavirus-vaccine-and-treatment-tracker.p.rapidapi.com")
-
-    headers = {
-        'x-rapidapi-key': "84ddb881f1mshe52cf4b1b8fbde2p1665f2jsnc71b246a3a81",
-        'x-rapidapi-host': "vaccovid-coronavirus-vaccine-and-treatment-tracker.p.rapidapi.com"
-        }
-
-    connect.request("GET", "/api/npm-covid-data/", headers=headers)
-
-    res = connect.getresponse()
-    data = res.read()
-
-    return list(json.loads(data.decode("utf-8")))
-
-def getCountryStat(CountryIdentifyer):
-
-    conn = http.client.HTTPSConnection("vaccovid-coronavirus-vaccine-and-treatment-tracker.p.rapidapi.com")
-
-    headers = {
-        'x-rapidapi-key': "84ddb881f1mshe52cf4b1b8fbde2p1665f2jsnc71b246a3a81",
-        'x-rapidapi-host': "vaccovid-coronavirus-vaccine-and-treatment-tracker.p.rapidapi.com"
-        }
-
-    conn.request("GET", "/api/covid-ovid-data/sixmonth/" + CountryIdentifyer, headers=headers)
-
-    res = conn.getresponse()
-    data = res.read()
-
-    if data.decode("utf-8") == '[]':
-        CountryList = getCountriesList()
-        for i in range(len(CountryList)):
-            if str(dict(CountryList[i]).get("TwoLetterSymbol")).lower() == CountryIdentifyer.lower() or str(dict(CountryList[i]).get("Country")).lower() == CountryIdentifyer.lower():
-                return list(getCountryStat(dict(CountryList[i]).get("ThreeLetterSymbol")))
-        return ""
-    else:
-        return list(json.loads(data.decode("utf-8")))
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
-        MainWindow.setObjectName("Covid-19 countries status")
+        MainWindow.setObjectName("MainWindow")
         MainWindow.resize(800, 600)
-
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
-
         self.scrollArea = QtWidgets.QScrollArea(self.centralwidget)
         self.scrollArea.setGeometry(QtCore.QRect(219, 6, 571, 591))
         self.scrollArea.setWidgetResizable(True)
         self.scrollArea.setObjectName("scrollArea")
-
         self.scrollAreaWidgetContents = QtWidgets.QWidget()
         self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, 0, 569, 122))
-
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Maximum)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.scrollAreaWidgetContents.sizePolicy().hasHeightForWidth())
-
         self.scrollAreaWidgetContents.setSizePolicy(sizePolicy)
         self.scrollAreaWidgetContents.setObjectName("scrollAreaWidgetContents")
-
         self.verticalLayout = QtWidgets.QVBoxLayout(self.scrollAreaWidgetContents)
         self.verticalLayout.setSizeConstraint(QtWidgets.QLayout.SetFixedSize)
         self.verticalLayout.setObjectName("verticalLayout")
-
-        self.CountriesList = []
-
-        self.CountriesList.append(QtWidgets.QLabel(self.scrollAreaWidgetContents))
-        self.CountriesList[0].setMinimumSize(QtCore.QSize(0, 100))
-        self.CountriesList[0].setObjectName("label")
-
-        for i in range(len(self.CountriesList)):
-            self.verticalLayout.addWidget(self.CountriesList[i])
-        #self.verticalLayout.addWidget(self.label)
-
+        self.label = QtWidgets.QLabel(self.scrollAreaWidgetContents)
+        self.label.setMinimumSize(QtCore.QSize(0, 100))
+        self.label.setMaximumSize(QtCore.QSize(16777215, 16777215))
+        self.label.setObjectName("label")
+        self.verticalLayout.addWidget(self.label)
         self.scrollArea.setWidget(self.scrollAreaWidgetContents)
-
         self.searchButton = QtWidgets.QPushButton(self.centralwidget)
         self.searchButton.setGeometry(QtCore.QRect(10, 50, 201, 41))
         self.searchButton.setObjectName("searchButton")
-
         self.searchLine = QtWidgets.QLineEdit(self.centralwidget)
         self.searchLine.setGeometry(QtCore.QRect(10, 10, 201, 31))
         self.searchLine.setObjectName("searchLine")
-
         self.resetButton = QtWidgets.QPushButton(self.centralwidget)
         self.resetButton.setGeometry(QtCore.QRect(10, 110, 201, 41))
         self.resetButton.setObjectName("resetButton")
-
         self.scrollArea.raise_()
         self.searchLine.raise_()
         self.resetButton.raise_()
         self.searchButton.raise_()
-
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
@@ -116,9 +59,7 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-        for i in self.CountriesList:
-            i.setText(_translate("MainWindow", "TextLabel"))
-        #self.label.setText(_translate("MainWindow", "TextLabel"))
+        self.label.setText(_translate("MainWindow", "TextLabel"))
         self.searchButton.setText(_translate("MainWindow", "Search"))
         self.resetButton.setText(_translate("MainWindow", "Reset"))
 
