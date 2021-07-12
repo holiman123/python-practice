@@ -55,8 +55,11 @@ print()
 print("final string:", finalString)
 
 # 7. start
-maxInNumbers = max(numbers)
-print("\nMax number is", maxInNumbers)
+if numbers != []:
+    maxInNumbers = max(numbers)
+    print("\nMax number is", maxInNumbers)
+else:
+    print("There is not numbers :/")
 # 7. end
 
 # 8. start
