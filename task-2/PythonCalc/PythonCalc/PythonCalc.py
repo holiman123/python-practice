@@ -98,45 +98,48 @@ def replaceWithCalc(exp, action):
 # calculate math expression to number
 def calc(exp):
 
-    print("calc", ''.join(exp))
-    while(True):
+    try:
+        print("calc", ''.join(exp))
+        while(True):
 
-        # Breckets calculate
-        if myLIndex(exp, "(") != -1:
-            i = myLIndex(exp, "(") + 1
-            bracketCount = 1
-            while(True):
-                if(exp[i] == "("):
-                    bracketCount += 1
-                if(exp[i] == ")"):
-                    bracketCount -= 1
-                if(bracketCount == 0):
-                    exp = myReplace(exp, exp[myLIndex(exp, "("):i + 1], calc(exp[myLIndex(exp, "(") + 1: i + 0]))
-                    break
-                i += 1
-        # calculate each math function by one
-        else:
-            exp = replaceWithCalc(exp, "log")
-            exp = replaceWithCalc(exp, "ln")
-            exp = replaceWithCalc(exp, "bin")
-            exp = replaceWithCalc(exp, "sqrt")
-            exp = replaceWithCalc(exp, "asin")
-            exp = replaceWithCalc(exp, "acos")
-            exp = replaceWithCalc(exp, "atg")
-            exp = replaceWithCalc(exp, "actg")
-            exp = replaceWithCalc(exp, "sin")
-            exp = replaceWithCalc(exp, "cos")
-            exp = replaceWithCalc(exp, "tg")
-            exp = replaceWithCalc(exp, "ctg")
-            exp = replaceWithCalc(exp, "%")
-            exp = replaceWithCalc(exp, "**")
-            exp = replaceWithCalc(exp, "/")
-            exp = replaceWithCalc(exp, "*")
-            exp = replaceWithCalc(exp, "-")
-            exp = replaceWithCalc(exp, "+")
+            # Breckets calculate
+            if myLIndex(exp, "(") != -1:
+                i = myLIndex(exp, "(") + 1
+                bracketCount = 1
+                while(True):
+                    if(exp[i] == "("):
+                        bracketCount += 1
+                    if(exp[i] == ")"):
+                        bracketCount -= 1
+                    if(bracketCount == 0):
+                        exp = myReplace(exp, exp[myLIndex(exp, "("):i + 1], calc(exp[myLIndex(exp, "(") + 1: i + 0]))
+                        break
+                    i += 1
+            # calculate each math function by one
+            else:
+                exp = replaceWithCalc(exp, "log")
+                exp = replaceWithCalc(exp, "ln")
+                exp = replaceWithCalc(exp, "bin")
+                exp = replaceWithCalc(exp, "sqrt")
+                exp = replaceWithCalc(exp, "asin")
+                exp = replaceWithCalc(exp, "acos")
+                exp = replaceWithCalc(exp, "atg")
+                exp = replaceWithCalc(exp, "actg")
+                exp = replaceWithCalc(exp, "sin")
+                exp = replaceWithCalc(exp, "cos")
+                exp = replaceWithCalc(exp, "tg")
+                exp = replaceWithCalc(exp, "ctg")
+                exp = replaceWithCalc(exp, "%")
+                exp = replaceWithCalc(exp, "**")
+                exp = replaceWithCalc(exp, "/")
+                exp = replaceWithCalc(exp, "*")
+                exp = replaceWithCalc(exp, "-")
+                exp = replaceWithCalc(exp, "+")
 
-            print("return:", exp)
-            return exp
+                print("return:", exp)
+                return exp
+    except Exception:
+        return ""
 
 # translate standard expression entry to correct form for calc func
 def translate(exp):
@@ -163,7 +166,10 @@ def EqPressed(*event):
 # Method for button events
 def Button1Pressed(input = ""):
     if input == "Game":
-        outLb.configure(text = str(float(entry.get()) / 160) + " | " + str(float(entry.get()) % 160))
+        try:
+            outLb.configure(text = str(float(entry.get()) / 160) + " | " + str(float(entry.get()) % 160))
+        except:
+            return 0
         return 0
     if input == "clear":
         entry.delete(0, END)
