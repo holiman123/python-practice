@@ -52,7 +52,18 @@ def getCountryStat(CountryIdentifyer):
         return list(json.loads(data.decode("utf-8")))
 
 class Ui_MainWindow(object):
+    def createLabels(self, CountriesList):
+        resoultLabelList = []
+
+        for i in range(len(CountriesList)):
+            resoultLabelList.append(QtWidgets.QLabel(self.scrollAreaWidgetContents))
+            resoultLabelList[i].setMinimumHeight(20)
+            resoultLabelList[i].setObjectName("CountryLabel" + str(i))
+            resoultLabelList[i].setText(dict(CountriesList[i]).get("Country")) # temp
+        return resoultLabelList
+
     def setupUi(self, MainWindow):
+        print("jopa")
         MainWindow.setObjectName("Covid-19 countries status")
         MainWindow.resize(800, 600)
 
@@ -60,7 +71,7 @@ class Ui_MainWindow(object):
         self.centralwidget.setObjectName("centralwidget")
 
         self.scrollArea = QtWidgets.QScrollArea(self.centralwidget)
-        self.scrollArea.setGeometry(QtCore.QRect(219, 6, 571, 591))
+        self.scrollArea.setGeometry(QtCore.QRect(219, 36, 571, 560))
         self.scrollArea.setWidgetResizable(True)
         self.scrollArea.setObjectName("scrollArea")
 
@@ -79,14 +90,10 @@ class Ui_MainWindow(object):
         self.verticalLayout.setSizeConstraint(QtWidgets.QLayout.SetFixedSize)
         self.verticalLayout.setObjectName("verticalLayout")
 
-        self.CountriesList = []
+        #self.CountriesLabelList.append(QtWidgets.QLabel(self.scrollAreaWidgetContents))
+        #self.CountriesLabelList[0].setMinimumSize(QtCore.QSize(0, 20))
+        #self.CountriesLabelList[0].setObjectName("label")
 
-        self.CountriesList.append(QtWidgets.QLabel(self.scrollAreaWidgetContents))
-        self.CountriesList[0].setMinimumSize(QtCore.QSize(0, 100))
-        self.CountriesList[0].setObjectName("label")
-
-        for i in range(len(self.CountriesList)):
-            self.verticalLayout.addWidget(self.CountriesList[i])
         #self.verticalLayout.addWidget(self.label)
 
         self.scrollArea.setWidget(self.scrollAreaWidgetContents)
@@ -102,6 +109,7 @@ class Ui_MainWindow(object):
         self.resetButton = QtWidgets.QPushButton(self.centralwidget)
         self.resetButton.setGeometry(QtCore.QRect(10, 110, 201, 41))
         self.resetButton.setObjectName("resetButton")
+        self.resetButton.clicked.connect(self.ResetPressed)
 
         self.scrollArea.raise_()
         self.searchLine.raise_()
@@ -116,11 +124,22 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-        for i in self.CountriesList:
-            i.setText(_translate("MainWindow", "TextLabel"))
+        #for i in self.CountriesLabelList:
+            #i.setText(_translate("MainWindow", "TextLabel"))
         #self.label.setText(_translate("MainWindow", "TextLabel"))
         self.searchButton.setText(_translate("MainWindow", "Search"))
         self.resetButton.setText(_translate("MainWindow", "Reset"))
+
+    def ResetPressed(self):
+        #clearing vertical layout:
+        for i in reversed(range(self.verticalLayout.count())): 
+            self.verticalLayout.itemAt(i).widget().setParent(None)
+        
+        #set new widgets to layout:
+        self.CountriesLabelList = self.createLabels(getCountriesList())
+        for i in range(len(self.CountriesLabelList)):
+            self.verticalLayout.addWidget(self.CountriesLabelList[i])
+
 
 
 if __name__ == "__main__":
