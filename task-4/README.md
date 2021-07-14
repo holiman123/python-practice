@@ -1,10 +1,10 @@
-# Covid-19 statistical program
+# Covid-19 statistical telegram bot
 
-Programme that shows statistical data about Covid.<br>
+Telegram bot that shows statistical data about Covid.<br>
 
 ---
 
-![image](https://user-images.githubusercontent.com/43368212/125640391-3dc536b6-9d29-44e3-ac7b-95cf682072c9.png)
+
 
 ---
 
