@@ -58,6 +58,7 @@ def niceStringFormat(inputString):
 
 bot = telebot.TeleBot(config.TOKEN)
 
+# start method, shows welcome text and ctreates below button:
 @bot.message_handler(commands=['start'])
 def welcome(message):
 
@@ -68,12 +69,13 @@ def welcome(message):
 
     bot.send_message(message.chat.id, "Welcome to Covid-19 statistical bot!\nSee countries list or write country name/two letter symbol/three letter symbol", reply_markup=markup)
 
-
+# create inline keyboard about getting file:
 def gen_markup():
     markup = types.InlineKeyboardMarkup()
     markup.add(types.InlineKeyboardButton(text='get file', callback_data="temp"))
     return markup
 
+# callback to pressing button to get file, (send file)
 @bot.callback_query_handler(func=lambda call: True)
 def callback_query(call):
     open("Covid countries statistics.txt", "w", encoding="utf-8").write("")
@@ -83,6 +85,7 @@ def callback_query(call):
         file.write(str(niceStringFormat(" " + str(i + 1) + ")/" + dict(tempCountriesList[i]).get("Country") + "/Total cases: " + str(dict(tempCountriesList[i]).get("TotalCases")) + "/Infection risk: " + str(dict(tempCountriesList[i]).get("Infection_Risk")) + "/Total death: " + str(dict(tempCountriesList[i]).get("TotalDeaths")) + "/Total recovered: " + str(dict(tempCountriesList[i]).get("TotalRecovered"))) + "\n"))
     bot.send_document(call.message.chat.id, open("Covid countries statistics.txt"))
 
+# process input messages from user
 @bot.message_handler(func=lambda message: True)
 def message_handler(message):
     if message.text == "See countries list by total cases rate":
@@ -94,4 +97,6 @@ def message_handler(message):
     else:
         tempCountry = dict(getCountryStat(message.text)[0])
         bot.send_message(message.chat.id, str(dict(tempCountry).get("rank")) + ") " + dict(tempCountry).get("Country") + "\nTotal cases: " + str(dict(tempCountry).get("TotalCases")) + "\nInfection risk: " + str(dict(tempCountry).get("Infection_Risk")) + "\nTotal death: " + str(dict(tempCountry).get("TotalDeaths")) + "\nTotal recovered: " + str(dict(tempCountry).get("TotalRecovered")))
+
+# start bot
 bot.polling(none_stop=True)
