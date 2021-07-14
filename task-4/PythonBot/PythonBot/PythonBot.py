@@ -93,5 +93,5 @@ def message_handler(message):
         
     else:
         tempCountry = dict(getCountryStat(message.text)[0])
-        bot.send_message(message.chat.id, niceStringFormat(" " + dict(tempCountry).get("Country") + "\nTotal cases: " + str(dict(tempCountry).get("TotalCases")) + "\nInfection risk: " + str(dict(tempCountry).get("Infection_Risk")) + "\nTotal death: " + str(dict(tempCountry).get("TotalDeaths")) + "\nTotal recovered: " + str(dict(tempCountry).get("TotalRecovered"))))
+        bot.send_message(message.chat.id, str(dict(tempCountry).get("rank")) + ") " + dict(tempCountry).get("Country") + "\nTotal cases: " + str(dict(tempCountry).get("TotalCases")) + "\nInfection risk: " + str(dict(tempCountry).get("Infection_Risk")) + "\nTotal death: " + str(dict(tempCountry).get("TotalDeaths")) + "\nTotal recovered: " + str(dict(tempCountry).get("TotalRecovered")))
 bot.polling(none_stop=True)

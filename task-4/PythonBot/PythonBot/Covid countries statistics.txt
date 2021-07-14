@@ -1,4 +1,4 @@
- 1)   USA                       Total cases: 34812191     Infection risk: 10.45     Total death: 623492  Total recovered: 29307591
+ 1)   USA                       Total cases: 34819358     Infection risk: 10.46     Total death: 623573  Total recovered: 29310363
  2)   India                     Total cases: 30986803     Infection risk: 2.22      Total death: 412019  Total recovered: 30136483
  3)   Brazil                    Total cases: 19152065     Infection risk: 8.94      Total death: 535924  Total recovered: 17770617
  4)   Russia                    Total cases: 5857002      Infection risk: 4.01      Total death: 145278  Total recovered: 5257483
@@ -140,7 +140,7 @@
  140) Seychelles                Total cases: 17005        Infection risk: 17.18     Total death: 77      Total recovered: 16072
  141) Taiwan                    Total cases: 15328        Infection risk: 0.06      Total death: 753     Total recovered: 12838
  142) Somalia                   Total cases: 15068        Infection risk: 0.09      Total death: 781     Total recovered: 7266
- 143) Mali                      Total cases: 14486        Infection risk: 0.07      Total death: 528     Total recovered: 10655
+ 143) Mali                      Total cases: 14492        Infection risk: 0.07      Total death: 528     Total recovered: 10908
  144) Togo                      Total cases: 14320        Infection risk: 0.17      Total death: 134     Total recovered: 13721
  145) Andorra                   Total cases: 14167        Infection risk: 18.31     Total death: 127     Total recovered: 13796
  146) Tajikistan                Total cases: 13911        Infection risk: 0.14      Total death: 107     Total recovered: 13581
