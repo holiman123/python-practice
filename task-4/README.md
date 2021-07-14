@@ -3,44 +3,31 @@
 Telegram bot that shows statistical data about Covid.<br>
 
 ---
-
-
+#### Start bot:
+![start](https://user-images.githubusercontent.com/43368212/125689513-ba77dc87-159e-4c7a-82dc-7bf32f1ff365.png)
+#### Pressed down button, and pressed button to get file:
+![List](https://user-images.githubusercontent.com/43368212/125689657-3a777827-5479-4b37-af45-4f31b99f707f.png)
+#### Getting one country statistic:
+![one country stat](https://user-images.githubusercontent.com/43368212/125689666-3b3a28eb-3bc5-4fb7-b923-74dcf1d2a656.png)
 
 ---
 
 ### How to use:
 
-When program starts, it shows list, sorted by total cases of Covid, of countries information.<br>
-To reload list press **"reset"** button.<br>
-To see information about specific country write its name / ISO 3166-1 alpha-3 / ISO 3166-1 alpha-2, and press **"search"** button.
-
-#### Elements review:
-
-1) **Input text line**: input for country identifyer to find its information.
-2) **Search button**:   button to start search procces.
-3) **Reset button**:    button to reload all countries list.
-4) **Info area**:       area to output info about countries.  
+If you want to get countries list by their rank, press button below.<br>
+To get info about countries below fifth rate.<br>
+To get info about specific country, just send to bot name / two letter symbol / three letter symbol.<br>
 
 ---
-
-### Code review:
-Source code has class of UI, some main methods and buttons event methods.
-
-#### UI class:
-Original created in Qt Designer, and edited by myself to add methods *(createLabels, ResetPressed, SearchPressed)*.<br>
-There is also standart methods *(setupUI, retranslateUi)*.
 
 #### Methods:
 1) **"getCountriesList"**: get list of dictionaries of all countries information.<br>
 2) **"getCountryStat"**: get list of dictionaries of countries information that match to input country identifyer.<br>
 3) **"niceStringFormat"**: format string to nice look.<br>
-4) **"createLabels"**: create list of labels that contains countries information.<br>
-5) **"setupUi"**: set all UI widgets.<br>
-6) **"retranslateUi"**: set static texts.<br>
-
-#### Also there is two buttons event functions:
-7) **"ResetPressed"**: reset button event.<br>
-8) **"SearchPressed"**: search button event.<br>
+4) **"welcome"**: start method, shows welcome text and ctreates below button.<br>
+5) **"gen_markup"**: create inline keyboard about getting file.<br>
+6) **"callback_query_handler"**: callback to pressing button to get file, (send file).<br>
+7) **"message_handler"**: process input messages from user.<br>
 
 ---
 #### Author: Daniil Luchitskyi KI-20010B.
