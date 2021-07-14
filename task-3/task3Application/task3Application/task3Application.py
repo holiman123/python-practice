@@ -12,6 +12,7 @@ import json
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5.QtGui import *
 
 def getCountriesList():
     connect = http.client.HTTPSConnection("vaccovid-coronavirus-vaccine-and-treatment-tracker.p.rapidapi.com")
@@ -26,44 +27,60 @@ def getCountriesList():
     res = connect.getresponse()
     data = res.read()
 
-    return list(json.loads(data.decode("utf-8")))
+    resList = list(json.loads(data.decode("utf-8")))
+    del resList[0:2]
+
+    return resList
 
 def getCountryStat(CountryIdentifyer):
 
-    conn = http.client.HTTPSConnection("vaccovid-coronavirus-vaccine-and-treatment-tracker.p.rapidapi.com")
+    CountriesList = getCountriesList()
+    resList = []
 
-    headers = {
-        'x-rapidapi-key': "84ddb881f1mshe52cf4b1b8fbde2p1665f2jsnc71b246a3a81",
-        'x-rapidapi-host': "vaccovid-coronavirus-vaccine-and-treatment-tracker.p.rapidapi.com"
-        }
+    for i in CountriesList:
+        if str(dict(i).get("Country")).lower().startswith(CountryIdentifyer.lower()):
+            resList.append(dict(i))
+        if str(dict(i).get("ThreeLetterSymbol")).lower() == CountryIdentifyer.lower():
+            resList.append(dict(i))
+        if str(dict(i).get("TwoLetterSymbol")).lower() == CountryIdentifyer.lower():
+            resList.append(dict(i))
 
-    conn.request("GET", "/api/covid-ovid-data/sixmonth/" + CountryIdentifyer, headers=headers)
+    return resList
 
-    res = conn.getresponse()
-    data = res.read()
+def niceStringFormat(inputString):
 
-    if data.decode("utf-8") == '[]':
-        CountryList = getCountriesList()
-        for i in range(len(CountryList)):
-            if str(dict(CountryList[i]).get("TwoLetterSymbol")).lower() == CountryIdentifyer.lower() or str(dict(CountryList[i]).get("Country")).lower() == CountryIdentifyer.lower():
-                return list(getCountryStat(dict(CountryList[i]).get("ThreeLetterSymbol")))
-        return ""
-    else:
-        return list(json.loads(data.decode("utf-8")))
+    resString = inputString.split("/")
+    for i in range(3 - len(resString[0])):
+        resString[0] += (" ")
+    for i in range(22 - len(resString[1])):
+        resString[1] += (" ")
+    for i in range(9 - len(resString[2])):
+        resString[2] += (" ")
+    for i in range(9 - len(resString[3])):
+        resString[3] += (" ")
+    for i in range(9 - len(resString[4])):
+        resString[4] += (" ")
+    return str(' '.join(resString))
 
 class Ui_MainWindow(object):
     def createLabels(self, CountriesList):
         resoultLabelList = []
 
+        colorFlag = False
         for i in range(len(CountriesList)):
             resoultLabelList.append(QtWidgets.QLabel(self.scrollAreaWidgetContents))
             resoultLabelList[i].setMinimumHeight(20)
             resoultLabelList[i].setObjectName("CountryLabel" + str(i))
-            resoultLabelList[i].setText(dict(CountriesList[i]).get("Country")) # temp
+            print()
+            resoultLabelList[i].setText(niceStringFormat(str(i + 1) + "/" + dict(CountriesList[i]).get("Country") + "/" + str(dict(CountriesList[i]).get("TotalCases")) + "/" + str(dict(CountriesList[i]).get("Infection_Risk")) + "/" + str(dict(CountriesList[i]).get("TotalDeaths")) + "/" + str(dict(CountriesList[i]).get("TotalRecovered")) ))
+            resoultLabelList[i].setFont(QFont('Courier New', 8))
+            resoultLabelList[i].setStyleSheet("padding-left: 5px")
+            if colorFlag:
+                resoultLabelList[i].setStyleSheet("background-color: #dbdbdb; padding-left: 5px")
+            colorFlag = not colorFlag
         return resoultLabelList
 
     def setupUi(self, MainWindow):
-        print("jopa")
         MainWindow.setObjectName("Covid-19 countries status")
         MainWindow.resize(800, 600)
 
@@ -74,6 +91,7 @@ class Ui_MainWindow(object):
         self.scrollArea.setGeometry(QtCore.QRect(219, 36, 571, 560))
         self.scrollArea.setWidgetResizable(True)
         self.scrollArea.setObjectName("scrollArea")
+        self.scrollArea.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
 
         self.scrollAreaWidgetContents = QtWidgets.QWidget()
         self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, 0, 569, 122))
@@ -90,6 +108,9 @@ class Ui_MainWindow(object):
         self.verticalLayout.setSizeConstraint(QtWidgets.QLayout.SetFixedSize)
         self.verticalLayout.setObjectName("verticalLayout")
 
+        self.headLabel = QtWidgets.QLabel(self.centralwidget)
+        self.headLabel.setGeometry(QtCore.QRect(220, 10, 600, 20))
+        self.headLabel.setObjectName("head label")
         #self.CountriesLabelList.append(QtWidgets.QLabel(self.scrollAreaWidgetContents))
         #self.CountriesLabelList[0].setMinimumSize(QtCore.QSize(0, 20))
         #self.CountriesLabelList[0].setObjectName("label")
@@ -101,6 +122,7 @@ class Ui_MainWindow(object):
         self.searchButton = QtWidgets.QPushButton(self.centralwidget)
         self.searchButton.setGeometry(QtCore.QRect(10, 50, 201, 41))
         self.searchButton.setObjectName("searchButton")
+        self.searchButton.clicked.connect(self.SearchPressed)
 
         self.searchLine = QtWidgets.QLineEdit(self.centralwidget)
         self.searchLine.setGeometry(QtCore.QRect(10, 10, 201, 31))
@@ -115,6 +137,7 @@ class Ui_MainWindow(object):
         self.searchLine.raise_()
         self.resetButton.raise_()
         self.searchButton.raise_()
+        self.headLabel.raise_()
 
         MainWindow.setCentralWidget(self.centralwidget)
 
@@ -127,8 +150,10 @@ class Ui_MainWindow(object):
         #for i in self.CountriesLabelList:
             #i.setText(_translate("MainWindow", "TextLabel"))
         #self.label.setText(_translate("MainWindow", "TextLabel"))
+        self.headLabel.setText(_translate("MainWindow", "Rate:  Name:\t\t\t         Cases:\t  infection risk:    Death:         Recovered:"))
         self.searchButton.setText(_translate("MainWindow", "Search"))
         self.resetButton.setText(_translate("MainWindow", "Reset"))
+        self.ResetPressed()
 
     def ResetPressed(self):
         #clearing vertical layout:
@@ -138,9 +163,19 @@ class Ui_MainWindow(object):
         #set new widgets to layout:
         self.CountriesLabelList = self.createLabels(getCountriesList())
         for i in range(len(self.CountriesLabelList)):
+                self.verticalLayout.addWidget(self.CountriesLabelList[i])
+
+        self.searchLine.setText("")
+
+    def SearchPressed(self):
+        #clearing vertical layout:
+        for i in reversed(range(self.verticalLayout.count())): 
+            self.verticalLayout.itemAt(i).widget().setParent(None)
+        
+        #set new widgets to layout:
+        self.CountriesLabelList = self.createLabels(getCountryStat(self.searchLine.text()))
+        for i in range(len(self.CountriesLabelList)):
             self.verticalLayout.addWidget(self.CountriesLabelList[i])
-
-
 
 if __name__ == "__main__":
     import sys
