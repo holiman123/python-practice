@@ -1,0 +1,219 @@
+ 1)   USA                       Total cases: 34812191     Infection risk: 10.45     Total death: 623492  Total recovered: 29307591
+ 2)   India                     Total cases: 30986803     Infection risk: 2.22      Total death: 412019  Total recovered: 30136483
+ 3)   Brazil                    Total cases: 19152065     Infection risk: 8.94      Total death: 535924  Total recovered: 17770617
+ 4)   Russia                    Total cases: 5857002      Infection risk: 4.01      Total death: 145278  Total recovered: 5257483
+ 5)   France                    Total cases: 5829724      Infection risk: 8.91      Total death: 111413  Total recovered: 5652922
+ 6)   Turkey                    Total cases: 5500151      Infection risk: 6.45      Total death: 50367   Total recovered: 5365075
+ 7)   UK                        Total cases: 5233207      Infection risk: 7.67      Total death: 128530  Total recovered: 4374314
+ 8)   Argentina                 Total cases: 4682960      Infection risk: 10.26     Total death: 99640   Total recovered: 4314593
+ 9)   Colombia                  Total cases: 4548142      Infection risk: 8.84      Total death: 113839  Total recovered: 4299931
+ 10)  Italy                     Total cases: 4275846      Infection risk: 7.08      Total death: 127831  Total recovered: 4106315
+ 11)  Spain                     Total cases: 4041474      Infection risk: 8.64      Total death: 81043   Total recovered: 3654790
+ 12)  Germany                   Total cases: 3746169      Infection risk: 4.46      Total death: 91810   Total recovered: 3636800
+ 13)  Iran                      Total cases: 3440400      Infection risk: 4.04      Total death: 86391   Total recovered: 3069943
+ 14)  Poland                    Total cases: 2881046      Infection risk: 7.62      Total death: 75179   Total recovered: 2652604
+ 15)  Indonesia                 Total cases: 2670046      Infection risk: 0.97      Total death: 69210   Total recovered: 2157363
+ 16)  Mexico                    Total cases: 2604711      Infection risk: 2         Total death: 235277  Total recovered: 2056317
+ 17)  Ukraine                   Total cases: 2242245      Infection risk: 5.16      Total death: 52665   Total recovered: 2179076
+ 18)  South Africa              Total cases: 2236805      Infection risk: 3.72      Total death: 65595   Total recovered: 1970516
+ 19)  Peru                      Total cases: 2083567      Infection risk: 6.23      Total death: 194606  Total recovered: 1888961
+ 20)  Netherlands               Total cases: 1755126      Infection risk: 10.22     Total death: 17770   Total recovered: 1655827
+ 21)  Czechia                   Total cases: 1670073      Infection risk: 15.57     Total death: 30335   Total recovered: 1637367
+ 22)  Chile                     Total cases: 1592130      Infection risk: 8.26      Total death: 34049   Total recovered: 1543171
+ 23)  Philippines               Total cases: 1485457      Infection risk: 1.34      Total death: 26232   Total recovered: 1414817
+ 24)  Iraq                      Total cases: 1457192      Infection risk: 3.54      Total death: 17677   Total recovered: 1326073
+ 25)  Canada                    Total cases: 1421447      Infection risk: 3.73      Total death: 26450   Total recovered: 1390043
+ 26)  Belgium                   Total cases: 1098332      Infection risk: 9.43      Total death: 25207   Total recovered: 1050567
+ 27)  Sweden                    Total cases: 1093576      Infection risk: 10.76     Total death: 14606   Total recovered: 1069982
+ 28)  Romania                   Total cases: 1081405      Infection risk: 5.66      Total death: 34242   Total recovered: 1046537
+ 29)  Bangladesh                Total cases: 1059538      Infection risk: 0.64      Total death: 17052   Total recovered: 897412
+ 30)  Pakistan                  Total cases: 978847       Infection risk: 0.43      Total death: 22642   Total recovered: 915343
+ 31)  Portugal                  Total cases: 916559       Infection risk: 9.02      Total death: 17182   Total recovered: 852269
+ 32)  Malaysia                  Total cases: 867567       Infection risk: 2.65      Total death: 6503    Total recovered: 759705
+ 33)  Israel                    Total cases: 848322       Infection risk: 9.1       Total death: 6441    Total recovered: 836661
+ 34)  Japan                     Total cases: 824589       Infection risk: 0.65      Total death: 14971   Total recovered: 789905
+ 35)  Hungary                   Total cases: 808612       Infection risk: 8.39      Total death: 30013   Total recovered: 741896
+ 36)  Jordan                    Total cases: 759025       Infection risk: 7.36      Total death: 9864    Total recovered: 741540
+ 37)  Serbia                    Total cases: 717937       Infection risk: 8.25      Total death: 7077    Total recovered: 709096
+ 38)  Switzerland               Total cases: 706775       Infection risk: 8.11      Total death: 10901   Total recovered: 689840
+ 39)  Nepal                     Total cases: 660788       Infection risk: 2.23      Total death: 9430    Total recovered: 624711
+ 40)  UAE                       Total cases: 654813       Infection risk: 6.54      Total death: 1880    Total recovered: 632775
+ 41)  Austria                   Total cases: 652354       Infection risk: 7.2       Total death: 10726   Total recovered: 639154
+ 42)  Lebanon                   Total cases: 548455       Infection risk: 8.07      Total death: 7879    Total recovered: 534725
+ 43)  Morocco                   Total cases: 547273       Infection risk: 1.46      Total death: 9404    Total recovered: 527256
+ 44)  Tunisia                   Total cases: 510396       Infection risk: 4.27      Total death: 16651   Total recovered: 406349
+ 45)  Saudi Arabia              Total cases: 504960       Infection risk: 1.43      Total death: 8020    Total recovered: 486011
+ 46)  Ecuador                   Total cases: 470882       Infection risk: 2.63      Total death: 21832   Total recovered: 437167
+ 47)  Kazakhstan                Total cases: 466792       Infection risk: 2.46      Total death: 4769    Total recovered: 418228
+ 48)  Bolivia                   Total cases: 456815       Infection risk: 3.86      Total death: 17287   Total recovered: 383441
+ 49)  Greece                    Total cases: 447718       Infection risk: 4.32      Total death: 12789   Total recovered: 411564
+ 50)  Paraguay                  Total cases: 439897       Infection risk: 6.09      Total death: 14016   Total recovered: 396450
+ 51)  Belarus                   Total cases: 430121       Infection risk: 4.55      Total death: 3287    Total recovered: 423404
+ 52)  Bulgaria                  Total cases: 422619       Infection risk: 6.13      Total death: 18154   Total recovered: 396642
+ 53)  Panama                    Total cases: 417087       Infection risk: 9.51      Total death: 6654    Total recovered: 397152
+ 54)  Slovakia                  Total cases: 391971       Infection risk: 7.18      Total death: 12523   Total recovered: 379120
+ 55)  Costa Rica                Total cases: 385069       Infection risk: 7.49      Total death: 4829    Total recovered: 308570
+ 56)  Georgia                   Total cases: 381336       Infection risk: 9.58      Total death: 5492    Total recovered: 361327
+ 57)  Kuwait                    Total cases: 380699       Infection risk: 8.78      Total death: 2158    Total recovered: 360746
+ 58)  Uruguay                   Total cases: 377297       Infection risk: 10.82     Total death: 5849    Total recovered: 365219
+ 59)  Thailand                  Total cases: 363029       Infection risk: 0.52      Total death: 2934    Total recovered: 260584
+ 60)  Croatia                   Total cases: 361079       Infection risk: 8.85      Total death: 8233    Total recovered: 352251
+ 61)  Azerbaijan                Total cases: 337602       Infection risk: 3.3       Total death: 4988    Total recovered: 330946
+ 62)  Dominican Republic        Total cases: 335079       Infection risk: 3.06      Total death: 3897    Total recovered: 276227
+ 63)  Guatemala                 Total cases: 322120       Infection risk: 1.76      Total death: 9756    Total recovered: 282911
+ 64)  Palestine                 Total cases: 315409       Infection risk: 6.04      Total death: 3585    Total recovered: 310239
+ 65)  Denmark                   Total cases: 302328       Infection risk: 5.2       Total death: 2539    Total recovered: 291240
+ 66)  Oman                      Total cases: 288138       Infection risk: 5.5       Total death: 3484    Total recovered: 262174
+ 67)  Venezuela                 Total cases: 286990       Infection risk: 1.01      Total death: 3315    Total recovered: 269971
+ 68)  Egypt                     Total cases: 283320       Infection risk: 0.27      Total death: 16412   Total recovered: 219525
+ 69)  Lithuania                 Total cases: 279381       Infection risk: 10.41     Total death: 4402    Total recovered: 268230
+ 70)  Sri Lanka                 Total cases: 279059       Infection risk: 1.3       Total death: 3611    Total recovered: 247569
+ 71)  Ireland                   Total cases: 279053       Infection risk: 5.59      Total death: 5006    Total recovered: 261813
+ 72)  Ethiopia                  Total cases: 277318       Infection risk: 0.24      Total death: 4349    Total recovered: 262167
+ 73)  Honduras                  Total cases: 275675       Infection risk: 2.74      Total death: 7324    Total recovered: 94731
+ 74)  Bahrain                   Total cases: 267400       Infection risk: 15.18     Total death: 1378    Total recovered: 265013
+ 75)  Slovenia                  Total cases: 257989       Infection risk: 12.41     Total death: 4425    Total recovered: 252914
+ 76)  Moldova                   Total cases: 257678       Infection risk: 6.4       Total death: 6217    Total recovered: 250628
+ 77)  Cuba                      Total cases: 256607       Infection risk: 2.27      Total death: 1659    Total recovered: 215979
+ 78)  Armenia                   Total cases: 226756       Infection risk: 7.64      Total death: 4552    Total recovered: 217896
+ 79)  Qatar                     Total cases: 223780       Infection risk: 7.97      Total death: 599     Total recovered: 221665
+ 80)  Libya                     Total cases: 212013       Infection risk: 3.04      Total death: 3248    Total recovered: 181987
+ 81)  Myanmar                   Total cases: 208357       Infection risk: 0.38      Total death: 4181    Total recovered: 151442
+ 82)  Bosnia and Herzegovina    Total cases: 205238       Infection risk: 6.3       Total death: 9664    Total recovered: 186382
+ 83)  Kenya                     Total cases: 190183       Infection risk: 0.35      Total death: 3737    Total recovered: 180624
+ 84)  Zambia                    Total cases: 180549       Infection risk: 0.95      Total death: 2949    Total recovered: 164924
+ 85)  S. Korea                  Total cases: 171911       Infection risk: 0.34      Total death: 2048    Total recovered: 155491
+ 86)  Nigeria                   Total cases: 168867       Infection risk: 0.08      Total death: 2125    Total recovered: 164623
+ 87)  North Macedonia           Total cases: 155840       Infection risk: 7.48      Total death: 5487    Total recovered: 150146
+ 88)  Algeria                   Total cases: 148797       Infection risk: 0.33      Total death: 3882    Total recovered: 103192
+ 89)  Kyrgyzstan                Total cases: 143668       Infection risk: 2.17      Total death: 2133    Total recovered: 120731
+ 90)  Mongolia                  Total cases: 141689       Infection risk: 4.25      Total death: 703     Total recovered: 114872
+ 91)  Latvia                    Total cases: 138004       Infection risk: 7.4       Total death: 2540    Total recovered: 134916
+ 92)  Afghanistan               Total cases: 137853       Infection risk: 0.35      Total death: 5983    Total recovered: 84606
+ 93)  Norway                    Total cases: 133549       Infection risk: 2.44      Total death: 796     Total recovered: 88952
+ 94)  Albania                   Total cases: 132616       Infection risk: 4.61      Total death: 2456    Total recovered: 130059
+ 95)  Estonia                   Total cases: 131618       Infection risk: 9.92      Total death: 1270    Total recovered: 128042
+ 96)  Uzbekistan                Total cases: 117409       Infection risk: 0.35      Total death: 781     Total recovered: 112546
+ 97)  Namibia                   Total cases: 108785       Infection risk: 4.2       Total death: 2240    Total recovered: 80421
+ 98)  Montenegro                Total cases: 100519       Infection risk: 16        Total death: 1621    Total recovered: 98576
+ 99)  Finland                   Total cases: 98888        Infection risk: 1.78      Total death: 976     Total recovered: 46000
+ 100) Ghana                     Total cases: 97728        Infection risk: 0.31      Total death: 802     Total recovered: 94612
+ 101) Mozambique                Total cases: 93429        Infection risk: 0.29      Total death: 1033    Total recovered: 74392
+ 102) Uganda                    Total cases: 88674        Infection risk: 0.19      Total death: 2203    Total recovered: 63140
+ 103) Cyprus                    Total cases: 86185        Infection risk: 7.09      Total death: 382     Total recovered: 73452
+ 104) El Salvador               Total cases: 82130        Infection risk: 1.26      Total death: 2457    Total recovered: 74708
+ 105) Cameroon                  Total cases: 80858        Infection risk: 0.3       Total death: 1324    Total recovered: 78224
+ 106) Botswana                  Total cases: 80153        Infection risk: 3.34      Total death: 1253    Total recovered: 69931
+ 107) Maldives                  Total cases: 75332        Infection risk: 13.69     Total death: 214     Total recovered: 72569
+ 108) Zimbabwe                  Total cases: 73271        Infection risk: 0.49      Total death: 2274    Total recovered: 48102
+ 109) Luxembourg                Total cases: 72391        Infection risk: 11.37     Total death: 819     Total recovered: 69897
+ 110) Cambodia                  Total cases: 63615        Infection risk: 0.38      Total death: 986     Total recovered: 55365
+ 111) Singapore                 Total cases: 62804        Infection risk: 1.06      Total death: 36      Total recovered: 62467
+ 112) Jamaica                   Total cases: 50793        Infection risk: 1.71      Total death: 1134    Total recovered: 41090
+ 113) Rwanda                    Total cases: 49808        Infection risk: 0.38      Total death: 598     Total recovered: 34567
+ 114) Ivory Coast               Total cases: 48903        Infection risk: 0.18      Total death: 319     Total recovered: 48278
+ 115) Senegal                   Total cases: 47596        Infection risk: 0.28      Total death: 1203    Total recovered: 42685
+ 116) DRC                       Total cases: 44512        Infection risk: 0.05      Total death: 984     Total recovered: 28801
+ 117) Madagascar                Total cases: 42462        Infection risk: 0.15      Total death: 933     Total recovered: 40845
+ 118) Malawi                    Total cases: 40713        Infection risk: 0.21      Total death: 1276    Total recovered: 34139
+ 119) Angola                    Total cases: 40138        Infection risk: 0.12      Total death: 941     Total recovered: 34500
+ 120) Sudan                     Total cases: 36805        Infection risk: 0.08      Total death: 2760    Total recovered: 30647
+ 121) Vietnam                   Total cases: 35409        Infection risk: 0.04      Total death: 132     Total recovered: 9553
+ 122) Trinidad and Tobago       Total cases: 35046        Infection risk: 2.5       Total death: 952     Total recovered: 28213
+ 123) Réunion                   Total cases: 33295        Infection risk: 3.69      Total death: 256     Total recovered: 30781
+ 124) Cabo Verde                Total cases: 33053        Infection risk: 5.88      Total death: 290     Total recovered: 32258
+ 125) Malta                     Total cases: 31612        Infection risk: 7.14      Total death: 420     Total recovered: 30192
+ 126) Australia                 Total cases: 31429        Infection risk: 0.12      Total death: 912     Total recovered: 29534
+ 127) French Guiana             Total cases: 28554        Infection risk: 9.31      Total death: 163     Total recovered: 9995
+ 128) Syria                     Total cases: 25801        Infection risk: 0.14      Total death: 1900    Total recovered: 21893
+ 129) Gabon                     Total cases: 25198        Infection risk: 1.11      Total death: 162     Total recovered: 24941
+ 130) Guinea                    Total cases: 24173        Infection risk: 0.18      Total death: 180     Total recovered: 23416
+ 131) Suriname                  Total cases: 23594        Infection risk: 3.99      Total death: 594     Total recovered: 19584
+ 132) Mauritania                Total cases: 21902        Infection risk: 0.46      Total death: 496     Total recovered: 20395
+ 133) Guyana                    Total cases: 21055        Infection risk: 2.66      Total death: 499     Total recovered: 19260
+ 134) Eswatini                  Total cases: 20280        Infection risk: 1.73      Total death: 696     Total recovered: 18533
+ 135) Mayotte                   Total cases: 19450        Infection risk: 6.96      Total death: 174     Total recovered: 2964
+ 136) Haiti                     Total cases: 19374        Infection risk: 0.17      Total death: 487     Total recovered: 12977
+ 137) French Polynesia          Total cases: 19042        Infection risk: 6.74      Total death: 144     Total recovered: 18878
+ 138) Guadeloupe                Total cases: 17373        Infection risk: 4.34      Total death: 236     Total recovered: 2250
+ 139) Papua New Guinea          Total cases: 17340        Infection risk: 0.19      Total death: 179     Total recovered: 16975
+ 140) Seychelles                Total cases: 17005        Infection risk: 17.18     Total death: 77      Total recovered: 16072
+ 141) Taiwan                    Total cases: 15328        Infection risk: 0.06      Total death: 753     Total recovered: 12838
+ 142) Somalia                   Total cases: 15068        Infection risk: 0.09      Total death: 781     Total recovered: 7266
+ 143) Mali                      Total cases: 14486        Infection risk: 0.07      Total death: 528     Total recovered: 10655
+ 144) Togo                      Total cases: 14320        Infection risk: 0.17      Total death: 134     Total recovered: 13721
+ 145) Andorra                   Total cases: 14167        Infection risk: 18.31     Total death: 127     Total recovered: 13796
+ 146) Tajikistan                Total cases: 13911        Infection risk: 0.14      Total death: 107     Total recovered: 13581
+ 147) Belize                    Total cases: 13587        Infection risk: 3.35      Total death: 331     Total recovered: 12961
+ 148) Burkina Faso              Total cases: 13523        Infection risk: 0.06      Total death: 168     Total recovered: 13333
+ 149) Martinique                Total cases: 13371        Infection risk: 3.57      Total death: 99      Total recovered: 98
+ 150) Bahamas                   Total cases: 13233        Infection risk: 3.33      Total death: 254     Total recovered: 11961
+ 151) Congo                     Total cases: 12790        Infection risk: 0.23      Total death: 167     Total recovered: 11759
+ 152) Curaçao                   Total cases: 12418        Infection risk: 7.54      Total death: 126     Total recovered: 12225
+ 153) Lesotho                   Total cases: 12151        Infection risk: 0.56      Total death: 338     Total recovered: 6601
+ 154) Fiji                      Total cases: 12032        Infection risk: 1.33      Total death: 59      Total recovered: 2221
+ 155) Hong Kong                 Total cases: 11956        Infection risk: 0.16      Total death: 212     Total recovered: 11669
+ 156) Djibouti                  Total cases: 11621        Infection risk: 1.16      Total death: 155     Total recovered: 11454
+ 157) Aruba                     Total cases: 11180        Infection risk: 10.43     Total death: 108     Total recovered: 11029
+ 158) South Sudan               Total cases: 10911        Infection risk: 0.1       Total death: 117     Total recovered: 10514
+ 159) Timor-Leste               Total cases: 9960         Infection risk: 0.74      Total death: 25      Total recovered: 9021
+ 160) Equatorial Guinea         Total cases: 8815         Infection risk: 0.61      Total death: 122     Total recovered: 8583
+ 161) Nicaragua                 Total cases: 8767         Infection risk: 0.13      Total death: 193     Total recovered: 4225
+ 162) Benin                     Total cases: 8244         Infection risk: 0.07      Total death: 107     Total recovered: 8081
+ 163) CAR                       Total cases: 7142         Infection risk: 0.15      Total death: 98      Total recovered: 6859
+ 164) Yemen                     Total cases: 6961         Infection risk: 0.02      Total death: 1366    Total recovered: 4147
+ 165) Iceland                   Total cases: 6675         Infection risk: 1.94      Total death: 30      Total recovered: 6611
+ 166) Gambia                    Total cases: 6414         Infection risk: 0.26      Total death: 185     Total recovered: 5928
+ 167) Eritrea                   Total cases: 6327         Infection risk: 0.18      Total death: 30      Total recovered: 5906
+ 168) Sierra Leone              Total cases: 6100         Infection risk: 0.07      Total death: 113     Total recovered: 4035
+ 169) Channel Islands           Total cases: 5889         Infection risk: 3.36      Total death: 86      Total recovered: 4162
+ 170) Burundi                   Total cases: 5706         Infection risk: 0.05      Total death: 8       Total recovered: 773
+ 171) Niger                     Total cases: 5546         Infection risk: 0.02      Total death: 194     Total recovered: 5245
+ 172) Saint Lucia               Total cases: 5430         Infection risk: 2.94      Total death: 86      Total recovered: 5199
+ 173) Liberia                   Total cases: 5276         Infection risk: 0.1       Total death: 144     Total recovered: 2622
+ 174) San Marino                Total cases: 5094         Infection risk: 14.98     Total death: 90      Total recovered: 5002
+ 175) Chad                      Total cases: 4955         Infection risk: 0.03      Total death: 174     Total recovered: 4777
+ 176) Gibraltar                 Total cases: 4486         Infection risk: 13.32     Total death: 94      Total recovered: 4266
+ 177) Barbados                  Total cases: 4196         Infection risk: 1.46      Total death: 48      Total recovered: 4074
+ 178) Comoros                   Total cases: 3996         Infection risk: 0.45      Total death: 146     Total recovered: 3798
+ 179) Guinea-Bissau             Total cases: 3961         Infection risk: 0.2       Total death: 70      Total recovered: 3640
+ 180) Liechtenstein             Total cases: 3058         Infection risk: 8         Total death: 59      Total recovered: 2977
+ 181) Laos                      Total cases: 2976         Infection risk: 0.04      Total death: 3       Total recovered: 2174
+ 182) New Zealand               Total cases: 2790         Infection risk: 0.06      Total death: 26      Total recovered: 2722
+ 183) Sint Maarten              Total cases: 2650         Infection risk: 6.11      Total death: 34      Total recovered: 2589
+ 184) Monaco                    Total cases: 2648         Infection risk: 6.7       Total death: 33      Total recovered: 2555
+ 185) Bermuda                   Total cases: 2525         Infection risk: 4.07      Total death: 33      Total recovered: 2481
+ 186) Turks and Caicos          Total cases: 2440         Infection risk: 6.22      Total death: 18      Total recovered: 2400
+ 187) Sao Tome and Principe     Total cases: 2392         Infection risk: 1.07      Total death: 37      Total recovered: 2327
+ 188) Saint Martin              Total cases: 2373         Infection risk: 6.03      Total death: 38      Total recovered: 1399
+ 189) Bhutan                    Total cases: 2324         Infection risk: 0.3       Total death: 1       Total recovered: 1986
+ 190) St. Vincent Grenadines    Total cases: 2245         Infection risk: 2.02      Total death: 12      Total recovered: 2149
+ 191) Mauritius                 Total cases: 1858         Infection risk: 0.15      Total death: 18      Total recovered: 1534
+ 192) Isle of Man               Total cases: 1739         Infection risk: 2.03      Total death: 29      Total recovered: 1578
+ 193) Caribbean Netherlands     Total cases: 1661         Infection risk: 6.27      Total death: 17      Total recovered: 1631
+ 194) British Virgin Islands    Total cases: 1286         Infection risk: 4.22      Total death: 4       Total recovered: 312
+ 195) Antigua and Barbuda       Total cases: 1266         Infection risk: 1.28      Total death: 42      Total recovered: 1222
+ 196) St. Barth                 Total cases: 1005         Infection risk: 10.14     Total death: 1       Total recovered: 462
+ 197) Faeroe Islands            Total cases: 898          Infection risk: 1.83      Total death: 1       Total recovered: 778
+ 198) Diamond Princess          Total cases: 712          Infection risk: 0         Total death: 13      Total recovered: 699
+ 199) Cayman Islands            Total cases: 619          Infection risk: 0.93      Total death: 2       Total recovered: 613
+ 200) Saint Kitts and Nevis     Total cases: 540          Infection risk: 1.01      Total death: 3       Total recovered: 423
+ 201) Tanzania                  Total cases: 509          Infection risk: 0         Total death: 21      Total recovered: 183
+ 202) Wallis and Futuna         Total cases: 445          Infection risk: 4.03      Total death: 7       Total recovered: 438
+ 203) Brunei                    Total cases: 282          Infection risk: 0.06      Total death: 3       Total recovered: 256
+ 204) Dominica                  Total cases: 199          Infection risk: 0.28      Total death: 0       Total recovered: 194
+ 205) Grenada                   Total cases: 161          Infection risk: 0.14      Total death: 1       Total recovered: 160
+ 206) New Caledonia             Total cases: 129          Infection risk: 0.04      Total death: 0       Total recovered: 58
+ 207) Anguilla                  Total cases: 111          Infection risk: 0.73      Total death: 0       Total recovered: 109
+ 208) Greenland                 Total cases: 64           Infection risk: 0.11      Total death: 0       Total recovered: 51
+ 209) Falkland Islands          Total cases: 63           Infection risk: 1.76      Total death: 0       Total recovered: 63
+ 210) Macao                     Total cases: 55           Infection risk: 0.01      Total death: 0       Total recovered: 53
+ 211) Vatican City              Total cases: 27           Infection risk: 3.36      Total death: 0       Total recovered: 27
+ 212) Saint Pierre Miquelon     Total cases: 26           Infection risk: 0.45      Total death: 0       Total recovered: 26
+ 213) Montserrat                Total cases: 21           Infection risk: 0.42      Total death: 1       Total recovered: 19
+ 214) Solomon Islands           Total cases: 20           Infection risk: 0         Total death: 0       Total recovered: 20
+ 215) Western Sahara            Total cases: 10           Infection risk: 0         Total death: 1       Total recovered: 8
+ 216) MS Zaandam                Total cases: 9            Infection risk: 0         Total death: 2       Total recovered: 7
+ 217) Vanuatu                   Total cases: 4            Infection risk: 0         Total death: 1       Total recovered: 3
+ 218) Marshall Islands          Total cases: 4            Infection risk: 0.01      Total death: 0       Total recovered: 4
+ 219) China                     Total cases: 92119        Infection risk: 0.01      Total death: 4636    Total recovered: 86982
